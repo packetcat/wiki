@@ -1,15 +1,18 @@
 Configuring SNOMASKs
 --------------------
 
-To set SNOMASKs, set user mode +s with the server notice masks you want as a parameter to the mode. For example, to see local and remote connections and quit notices, execute the following command:
+To set SNOMASKs, set user mode +s with the server notice masks you want as a parameter to the mode.
+For example, to see local and remote connections and quit notices, execute the following command:
 
     /MODE YourNick +s +cCqQ
 
-To enable automatic setting of SNOMASKs upon opering, load [m_opermodes](https://github.com/inspircd/wiki/blob/master/Modules/opermodes.md) and set the modes in the type block. For example:
+To enable automatic setting of SNOMASKs upon opering, load [m_opermodes](https://github.com/inspircd/wiki/blob/master/Modules/opermodes.md)
+and set the modes in the type block. For example:
 
     <type name="GlobalOp" classes="OperChat BanControl HostCloak Modular" host="globalop.chatspike.net" automodes="+s +cCqQ">
 
-To remove a SNOMASK, set user mode +s again, but remove masks by sending a 'negative' change. For example, to disable remote connection and quit notices, execute the following command:
+To remove a SNOMASK, set user mode +s again, but remove masks by sending a 'negative' change. For
+example, to disable remote connection and quit notices, execute the following command:
 
     /MODE YourNick +s -CQ
 
@@ -22,14 +25,18 @@ A list of the valid server notice masks and what they do is listed below.
 Channel Logging
 ---------------
 
-You can use the [m_chanlog](https://github.com/inspircd/wiki/blob/master/Modules/chanlog.md) module to send messages to a channel of your choice. You can even have multiple channels for different masks. Use local masks on every server to the same channel to receive messages globally in the channel.
+You can use the [m_chanlog](https://github.com/inspircd/wiki/blob/master/Modules/chanlog.md) module
+to send messages to a channel of your choice. You can even have multiple channels for different
+masks. Use local masks on every server to the same channel to receive messages globally in the
+channel.
 
 Valid Server Notice Masks
 -------------------------
 
 ### Core Server Notice Masks
 
-These are the server notice masks implemented by the core. Modules (table #2) may implement extra notice masks.
+These are the server notice masks implemented by the core. Modules (table #2) may implement extra
+notice masks.
 
 
 SNOTICE Mask | Function

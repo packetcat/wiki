@@ -43,34 +43,36 @@ These are the server notice masks implemented by the core. Modules (table #2) ma
 notice masks.
 
 
-SNOTICE Mask | Function
------------- | --------
-A            | Allows receipt of global announcement messages
-a            | Allows receipt of local announcement messages 
-C            | Allows receipt of remote connection messages
-c            | Allows receipt of local connection messages
-Q            | Allows receipt of remote quit messages 
-q            | Allows receipt of local quit messages 
-k            | Allows receipt of local kill messages
-K            | Allows receipt of remote kill messages
-L            | Allows receipt of linking related messages from other servers
-l            | Allows receipt of linking related messages 
-O            | Allows receipt of remote oper-up, oper-down, and oper-failure messages 
-o            | Allows receipt of local oper-up, oper-down, and oper-failure messages 
-d            | Allows receipt of general (and sometimes random) debug messages 
-X            | Allows receipt of remote XLine notices (E/G/K/Q/Z as well as those provided by modules)
-x            | Allows receipt of local XLine notices (E/G/K/Q/Z as well as those provided by modules) 
-t            | Allows receipt of attempts to use /STATS (local and remote)
-f            | Allows receipt of flooding notices
+SNOTICE Mask | Version | Function
+------------ | ------- | --------
+a            | 1.2+    | Allows receipt of local announcement messages
+A            | 1.2+    | Allows receipt of global announcement messages
+c            | 1.2+    | Allows receipt of local connection messages
+C            | 1.2+    | Allows receipt of remote connection messages
+d            | 1.2+    | Allows receipt of general and sometimes random debug messages
+f            | 1.2+    | Allows receipt of flooding notices
+k            | 1.2+    | Allows receipt of local kill messages
+K            | 1.2+    | Allows receipt of remote kill messages
+l            | 1.2+    | Allows receipt of local linking related messages
+L            | 1.2+    | Allows receipt of remote linking related messages
+o            | 1.2+    | Allows receipt of local oper up, oper down, and oper failure messages
+O            | 1.2+    | Allows receipt of remote oper up, oper down, and oper failure messages
+q            | 1.2+    | Allows receipt of local quit messages
+Q            | 1.2+    | Allows receipt of remote quit messages
+t            | 1.2+    | Allows receipt of attempts to use /STATS (local and remote)
+x            | 1.2+    | Allows receipt of XLine notices (E/G/K/Q/Z as well as those provided by modules)
+x            | 2.0+    | Allows receipt of local XLine notices (E/G/K/Q/Z as well as those provided by modules)
+X            | 2.0+    | Allows receipt of remote XLine notices (E/G/K/Q/Z as well as those provided by modules)
 
 ### Module Server Notice Masks
 
-SNOTICE Mask | Module       | Function
------------- | ------------ | -------- 
-g            | m_globops    | Allows receipt of local globops 
-G            | m_glopops    | Allows receipt of remote globops 
-n            | m_seenicks   | See local nickname changes 
-N            | m_seenicks   | See remote nickname changes 
-J            | m_chancreate | Allows receipt of remote channel creation notices 
-j            | m_chancreate | Allows receipt of local channel creation notices 
-v            | m_override   | Allows receipt of use of oper override
+SNOTICE Mask | Version | Module       | Function
+------------ | ------- | ------------ | -------- 
+g            | 1.2+    | m_globops    | Allows receipt of local globops
+G            | 1.2     | m_glopops    | Allows receipt of remote globops
+G            | 2.0+    | m_override   | Allows receipt of use of oper override
+J            | 1.2+    | m_chancreate | Allows receipt of remote channel creation notices
+j            | 1.2     | m_chancreate | Allows receipt of local channel creation notices
+n            | 1.2+    | m_seenicks   | See local nickname changes
+N            | 1.2+    | m_seenicks   | See remote nickname changes
+v            | 2.0+    | m_override   | Allows receipt of use of oper override

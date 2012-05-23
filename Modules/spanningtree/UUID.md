@@ -1,5 +1,4 @@
-UUIDs (Universally Unique User Identifiers)
-===========================================
+# InspIRCd Wiki &raquo; Modules &raquo; m_spanningtree &raquo; UUIDs (Universally Unique User Identifiers)
 
 Our implementation and definition of SID, ID, and UID closely matches TS6's. That is:
 
@@ -22,8 +21,7 @@ appears to be in use (possible after a wrap-around has occured) then the next ID
 will be tried repeatedly, until a free ID is found. This differs from TS6 implementations, some of
 which will restart the server once the UID space has been exhausted.
 
-Server ID (SID) auto generation
--------------------------------
+### Server ID (SID) auto generation
 
 InspIRCd servers have the capability to automatically generate a server ID. This is done using the
 hash function for the GNU GCC hash_map against the server name and server GECOS. In pseudocode,

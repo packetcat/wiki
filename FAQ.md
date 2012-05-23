@@ -1,8 +1,6 @@
-Frequently Asked Questions
---------------------------
+# InspIRCd Wiki &raquo; Frequently Asked Questions
 
-Why should I choose InspIRCd over some other IRC server?
---------------------------------------------------------
+## Why should I choose InspIRCd over some other IRC server?
 
 There are several reasons to choose InspIRCd over some other IRC server. These are:
 
@@ -24,15 +22,13 @@ builds beyond most other Windows IRC servers.
 * The InspIRCd development team welcome third party contributions, suggestions and criticism whereas
 many of the developers of alternative IRC servers do not.
 
-How much memory does InspIRCd use?
-----------------------------------
+## How much memory does InspIRCd use?
 
 A network with 3000-4000 locally connected clients and 10000 open channels experiences a constant
 1-4% CPU use with 70MB of RAM use. This won't go up drastically, but it will go up. Around 40000
 local clients means you'll be expecting some 500MB of RAM.
 
-How do I start InspIRCd?
-------------------------
+## How do I start InspIRCd?
 
 Navigate to the directory in which you installed InspIRCd and issue the following command:
 
@@ -41,13 +37,11 @@ Navigate to the directory in which you installed InspIRCd and issue the followin
 Note: these instructions only apply if you installed InspIRCd from source on a UNIX-like operating
 system. If you installed InspIRCd from a package manager it will probably not use this method.
 
-Can my network be the "official" InspIRCd network?
---------------------------------------------------
+## Can my network be the "official" InspIRCd network?
 
 Sorry, no. That privilege is reserved for our own network at [irc.chatspike.net](irc://irc.chatspike.net/).
 
-What services package should I choose?
---------------------------------------
+## What services package should I choose?
 
 This is an extremely subjective question. It is advised that you trial multiple different packages
 and use the one that you feel fits your needs.
@@ -56,11 +50,9 @@ Popular IRC services packages used with InspIRCd include:
 
 * [Anope](http://www.anope.org/)
 * [Atheme](http://www.atheme.net/)
+* [IRCServices](http://achurch.org/services/) (**No longer recommended** due to it being unsupported.)
 
-Use of [IRCServices](http://achurch.org/services/) is not recommended due to it being unsupported.
-
-Where should I report a bug/suggest a feature?
-----------------------------------------------
+## Where should I report a bug/suggest a feature?
 
 On the appropriate issue tracker:
 
@@ -69,20 +61,17 @@ On the appropriate issue tracker:
 * [Website](https://github.com/inspircd/inspircd.github.com/issues)
 * [Wiki](https://github.com/inspircd/wiki/issues)
 
-How can I contribute to InspIRCd?
----------------------------------
+## How can I contribute to InspIRCd?
 
 Take a look at our [Contributing](https://github.com/inspircd/wiki/blob/master/Contributing.md)
 page.
 
-Can I use InspIRCd on my large network?
----------------------------------------
+## Can I use InspIRCd on my large network?
 
 Feel free! We have tested InspIRCd up to 80000 clients on a single server. If you have any
 statistics on performance you would like to share, then get in touch.
 
-Do any large networks use InspIRCd?
------------------------------------
+## Do any large networks use InspIRCd?
 
 To our knowledge, the largest networks using InspIRCd are:
 
@@ -90,8 +79,7 @@ To our knowledge, the largest networks using InspIRCd are:
 * [Barafranca](irc://irc.barafranca.com/) with 1400-3500 users
 * [Chatspike](irc://irc.chatspike.net) with 600-1400 users
 
-Which socket engines are supported by InspIRCd?
------------------------------------------------
+## Which socket engines are supported by InspIRCd?
 
 The following high performance socket engines are supported:
 
@@ -106,14 +94,12 @@ performance gains over select(), and should be used wherever they are available.
 any of these socket engines, you should seriously consider upgrading your operating system or kernel
 before running an IRC server.
 
-What IRCd is InspIRCd based on?
--------------------------------
+## What IRCd is InspIRCd based on?
 
 None. Yes that's right, None. We didn't start from anyone else's code, at all. It is not based on
 Unreal, it is not based on Bahamut, nor is it based on any other IRCd. This is what makes it unique.
 
-Can I run InspIRCd as root?
----------------------------
+## Can I run InspIRCd as root?
 
 You could run the InspIRCd binary with the --runasroot parameter, but we will not provide any
 support for doing this. If you want to bind InspIRCd to a privileged port, you should instead
@@ -137,57 +123,49 @@ On FreeBSD and similar systems, there is a sysctl OID for this, which you can se
 This will allow non-root processes to bind any ports which are above port 1, essentially all
 available port numbers.
 
-How do I run InspIRCd when the system starts?
----------------------------------------------
+## How do I run InspIRCd when the system starts?
 
 To launch InspIRCd when your system starts, you should place the following line into the crontab for
 your IRCd user (crontab -e):
 
     @reboot cd /home/user/inspircd; ./inspircd start
 
-How do I get prefixes like `@`, `~` and `&`?
--------------------------------------------
+## How do I get prefixes like `@`, `~` and `&`?
 
 If you are using InspIRCd 1.2, load [m_customprefix](https://github.com/inspircd/wiki/blob/master/Modules/customprefix.md).
 
 If you are using InspIRCd 2.0 or newer, load [m_halfop](https://github.com/inspircd/wiki/blob/master/Modules/halfop.md)
-and [m_chanprotect](https://github.com/inspircd/wiki/blob/master/Modules/halfop.md).
+and [m_chanprotect](https://github.com/inspircd/wiki/blob/master/Modules/chanprotect.md).
 
-Why does my server have none of the advertised features?
---------------------------------------------------------
+## Why does my server have none of the advertised features?
 
 By default, InspIRCd only supports features specified in [RFC 1459](http://tools.ietf.org/html/rfc1459).
 If you want to add extra features then you must load the correct modules. A list of modules can be
 found in `docs/inspircd.conf.example`.
 
-Why do I get a 'Loader/Linker' error when loading a module?
------------------------------------------------------------
+## Why do I get a 'Loader/Linker' error when loading a module?
 
 The version of InspIRCd which the module was compiled for is different to your server. Run
 `make clean` and then `make install` to rebuild everything on the same version.
 
-When I run my IRC server it exits saying 'Failed to write PID-file'
--------------------------------------------------------------------
+## When I run my IRC server it exits saying 'Failed to write PID-file'
 
-There is a syntax error in your configuration file. To show the real error, move the \<pid\> tag to
+There is a syntax error in your configuration file. To show the real error, move the `<pid>` tag to
 the top of your configuration.
 
-How can I use channel admin commands such as kick/mode without having op?
--------------------------------------------------------------------------
+## How can I use channel admin commands such as kick/mode without having op?
 
 Load [m_override](https://github.com/inspircd/wiki/blob/master/Modules/override.md).
 
 Please note that this module must be loaded on all servers of your network or your mode changes may
 be reversed and/or you may cause desyncs.
 
-When users connect, InspIRCd never resolves their ident
--------------------------------------------------------
+## When users connect, InspIRCd never resolves their ident
 
 Ident lookups on InspIRCd are provided by [m_ident](https://github.com/inspircd/wiki/blob/master/Modules/ident.md).
 You must load this module for them to be resolved.
 
-Can InspIRCd make cheese sandwiches?
-------------------------------------
+## Can InspIRCd make cheese sandwiches?
 
-Yes, providing that you load the [m_cheesesandwich](https://github.com/inspircd/wiki/blob/master/Modules/m_cheesesandwich.md)
+Yes, providing that you load the [m_cheesesandwich](https://github.com/inspircd/wiki/blob/master/Modules/cheesesandwich.md)
 module.

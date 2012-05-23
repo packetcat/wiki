@@ -1,9 +1,10 @@
-Example Traffic
----------------
+# InspIRCd Wiki &raquo; Modules &raquo; m_spanningtree &raquo; Example Traffic
+
+## Example Traffic
 
 This is an example of a netburst and some random traffic between two 1.2.0 (Alpha 7) servers. Outbound traffic is indicated with a "->", inbound traffic is marked with "<-".
 
-<pre>
+```
 -> CAPAB START
 -> CAPAB MODULES m_allowinvite.so,m_alltime.so,m_auditorium.so,m_banexception.so,m_blockcaps.so,m_blockcolor.so,m_botmode.so,m_callerid.so,m_cban.so,m_censor.so,m_chanfilter.so, m_chanprotect.so,m_chghost.so,m_chgident.so,m_chgname.so,m_cloaking.so,m_commonchans.so,m_dccallow.so,m_deaf.so,m_delayjoin.so,m_filter.so,m_globalload.so,m_globops.so, m_hidechans.so,m_hideoper.so,m_invisible.so,m_inviteexception.so,m_joinflood.so,m_kicknorejoin.so,m_knock.so,m_messageflood.so,m_nickflood.so,m_nicklock.so,m_noctcp.so
 -> CAPAB MODULES m_nokicks.so,m_nonicks.so,m_nonotice.so,m_operchans.so,m_permchannels.so,m_redirect.so,m_remove.so,m_sajoin.so,m_samode.so,m_sanick.so,m_sapart.so,m_saquit.so, m_services_account.so,m_servprotect.so,m_sethost.so,m_setident.so,m_setname.so,m_showwhois.so,m_shun.so,m_silence.so,m_stripcolor.so,m_svshold.so,m_swhois.so,m_timebans.so, m_watch.so
@@ -48,4 +49,4 @@ m_censor.so,m_chanfilter.so,m_chanprotect.so,m_chghost.so,m_chgident.so,m_chgnam
 <- :037 ADDLINE Z 66.66.66.66 <Config> 1220196025 0 :This is the devils ip. You cannot use it.
 <- :037 ADDLINE Z 69.69.69.69 <Config> 1220196025 0 :No porn here thanks.
 <- :037 ENDBURST
-</pre>
+```

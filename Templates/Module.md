@@ -1,56 +1,47 @@
-# InspIRCd Wiki &raquo; Modules &raquo; m_**module**
+# InspIRCd Wiki &raquo; Modules &raquo; m_module_name
 
 ## Description
 
-**This module does...**
+Insert a short description of what this module does here.
 
 ## Configuration Tags
 
 ```XML
-<mytag
-  param1=""
-  param2="">
+<module name="m_module_name.so">
 ```
 
-* **param1: This parameter...**
-* **param2: This parameter...**
+```XML
+<tag param1="xxx" param2="yyy" param3="zzz">
+```
 
-### 1.2
-
-**Differences in 1.2 are...**
-
-### 2.0
-
-**Differences in 2.0 are...**
-
-### 2.1
-
-**Differences in 2.1 are...**
+* **attr1** Insert parameter description here.
+* **attr2** Insert parameter description here.
+* **attr3** Insert parameter description here.
 
 ## Commands
 
-**This module does/does not add any commands...**
+This module does not implement any commands.
 
-Command    | Parameters   | Action
----------- |------------- | ------
-/*COMMAND* | **<param1>** | **This modes does...**
+Command    | Syntax            | Description
+---------- | ----------------- | -----------
+COMMAND    | <param1> [param2] | Insert a description of the command here.
 
 ## Modes
 
-**This module does/does not add any modes...**
+This module does not implement any user or channel modes.
 
-Mode | Action
----- | ------
-+*!* | **This modes does...**
+Mode | Description
+---- | -----------
+?    | Insert a description of the mode here.
 
-## Extbans
+## Extended Bans
 
-**This module does/does not add any extbans...**
+This module does not implement any extended bans.
 
-Extban | Action
------- | ------
-*!:*   | **This extban does...**
+ExtBan | Description
+------ | -----------
+?      | Insert a description of the ExtBan here.
 
 ## Notes
 
-NOTE: **This module...***
+Insert any long notes or gotchas about this module here.

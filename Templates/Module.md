@@ -22,9 +22,9 @@ Insert a short description of what this module does here.
 
 This module does not implement any commands.
 
-Command    | Syntax            | Description
----------- | ----------------- | -----------
-COMMAND    | <param1> [param2] | Insert a description of the command here.
+Command    | Syntax              | Description
+---------- | ------------------- | -----------
+COMMAND    | `<param1> [param2]` | Insert a description of the command here.
 
 ## Modes
 

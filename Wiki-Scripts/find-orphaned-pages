@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'uri'
+available_files = Dir.glob("**/*.md")
+linked_files = []
+available_files.each do |file|
+	uris = URI.extract(File.read(file))
+	uris.each do |uri|
+		next unless uri[0..44] == 'https://github.com/inspircd/wiki/blob/master/'
+		linked_files << uri[45..-1].split(')')[0]
+	end
+end
+available_files.each do |file|
+	next if linked_files.include?(file)
+	puts "ORPHANED PAGE: #{file}"
+end

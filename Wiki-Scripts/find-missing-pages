@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require 'uri'
+available_files = Dir.glob("**/*.md")
+available_files.each do |file|
+	uris = URI.extract(File.read(file))
+	uris.each do |uri|
+		next unless uri[0..44] == 'https://github.com/inspircd/wiki/blob/master/'
+		path = uri[45..-1].split(')')[0]
+		next if File.exists?(path)
+		puts "MISSING PAGE: #{path} (linked from #{file})"
+	end
+end

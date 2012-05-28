@@ -10,7 +10,7 @@ Here are some resources that may (or may not!) be useful:
 and [Configuration](https://github.com/inspircd/wiki/blob/master/Configuration.md) pages might help
 get you going again.
 
-* Are you interested in [Contributing](https://github.com/inspircd/wiki/blob/master/Contributors/README.md)?
+* Are you interested in [Contributing](https://github.com/inspircd/wiki/blob/master/Contributing.md)?
 We'd love to hear from you!
 
 * The [FAQ](https://github.com/inspircd/wiki/blob/master/FAQ.md) is a good place to start looking if

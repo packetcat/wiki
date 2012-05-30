@@ -3,6 +3,9 @@
 There are many different methods for installing InspIRCd. You will need to pick the one which fits
 your needs best.
 
+Before you start, you may wish to consult the [system requirements](https://github.com/inspircd/wiki/blob/master/System-Requirements.md)
+and [supported operating systems](https://github.com/inspircd/wiki/blob/master/Supported-Operating-Systems.md).
+
 To build from source:
 
 * [Source Installation](https://github.com/inspircd/wiki/blob/master/Installation/Source.md) &mdash;

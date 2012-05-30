@@ -19,12 +19,12 @@ have no InspIRCd package available in their package managers.
 ## BSD
 
 **Name** | **Version Supported** | **Package Available**                                                             | **Notes**
----------| --------------------- | ------------------------------------------------------------------------------- - | ---------
+-------- | --------------------- | --------------------------------------------------------------------------------- | ---------
 FreeBSD  | 4.10 and newer        | ![Old package](https://raw.github.com/inspircd/wiki/master/Images/OldPackage.png) | The FreeBSD ports collection often has an outdated version of InspIRCd
 NetBSD   | 2.0 and newer         | ![Old package](https://raw.github.com/inspircd/wiki/master/Images/OldPackage.png) | none
 OpenBSD  | 3.6 and newer         | ![No package](https://raw.github.com/inspircd/wiki/master/Images/NoPackage.png)   | none
 
-##Linux##
+## Linux
 
 **Name**                  | **Version Supported** | **Package Available**                                                                     | **Notes**
 --------------------------| --------------------- | ----------------------------------------------------------------------------------------- | ---------
@@ -38,7 +38,7 @@ Red Hat Enterprise Linux  | ?                     | ![No package](https://raw.gi
 Ubuntu                    | ?                     | ![Old package](https://raw.github.com/inspircd/wiki/master/Images/OldPackage.png)         | Inherits its InspIRCd package from Debian
 SUSE                      | ?                     | ![Current package](https://raw.github.com/inspircd/wiki/master/Images/CurrentPackage.png) | No 2.0 package yet
 
-##Misc##
+## Misc
 
 **Name**          | **Version Supported** | **Package Available**                                                                     | **Notes**
 ----------------- | --------------------- | ----------------------------------------------------------------------------------------- | ---------

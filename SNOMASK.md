@@ -66,13 +66,17 @@ X            | 2.0+    | Allows receipt of remote XLine notices (E/G/K/Q/Z as we
 
 ### Module Server Notice Masks
 
-SNOTICE Mask | Version | Module       | Function
------------- | ------- | ------------ | -------- 
-g            | 1.2+    | m_globops    | Allows receipt of local globops
-G            | 1.2     | m_override   | Allows receipt of use of oper override
-G            | 2.0+    | m_glopops    | Allows receipt of remote globops
-J            | 1.2+    | m_chancreate | Allows receipt of remote channel creation notices
-j            | 1.2+    | m_chancreate | Allows receipt of local channel creation notices
-n            | 1.2+    | m_seenicks   | See local nickname changes
-N            | 1.2+    | m_seenicks   | See remote nickname changes
-v            | 2.0+    | m_override   | Allows receipt of use of oper override
+SNOTICE Mask | Version | Module        | Function
+------------ | ------- | ------------- | --------
+e            | 2.1+    | m_joinpartsno | Allows receipt of local channel join notices
+E            | 2.1+    | m_joinpartsno | Allows receipt of remote channel join notices
+g            | 1.2+    | m_globops     | Allows receipt of local globops
+G            | 1.2     | m_override    | Allows receipt of use of oper override
+G            | 2.0+    | m_glopops     | Allows receipt of remote globops
+J            | 1.2+    | m_chancreate  | Allows receipt of remote channel creation notices
+j            | 1.2+    | m_chancreate  | Allows receipt of local channel creation notices
+n            | 1.2+    | m_seenicks    | See local nickname changes
+N            | 1.2+    | m_seenicks    | See remote nickname changes
+p            | 2.1+    | m_joinpartsno | Allows receipt of local channel part notices
+P            | 2.1+    | m_joinpartsno | Allows receipt of remote channel part notices
+v            | 2.0+    | m_override    | Allows receipt of use of oper override
